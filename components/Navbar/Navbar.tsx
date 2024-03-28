@@ -11,9 +11,10 @@ export default function Navbar() {
                         <Image
                             src="/poke-logo.png"
                             alt="Logo Pokézyel"
-                            width={150}
+                            width={1000}
                             height={0}
-                            className="aspect-auto"
+                            priority
+                            className="w-[150px] aspect-auto"
                         />
                     </Link>
                     <div className="flex gap-8">

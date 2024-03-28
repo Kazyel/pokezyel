@@ -1,12 +1,13 @@
 "use client";
 
-import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function HomeLooking() {
     const [pokemon, setPokemon] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+
     const router = useRouter();
 
     return (
@@ -19,13 +20,30 @@ export default function HomeLooking() {
                 Try looking for a specific pokémon!
             </h2>
             <input
-                className="mt-10 w-1/3 text-center p-2 text-xl bg-transparent border-b border-black"
+                className="mt-20 w-1/3 text-center p-2 text-xl bg-transparent border-b border-black"
                 onChange={(e) => setPokemon(e.target.value)}
                 onKeyDown={(e) =>
-                    e.key === "Enter" ? router.push(`/pokemon/${pokemon}`) : ""
+                    e.key === "Enter" && pokemon
+                        ? (setIsLoading(true),
+                          setTimeout(
+                              () => router.push(`/pokemon/${pokemon}`),
+                              750
+                          ))
+                        : null
                 }
             />
-            <p className="mt-28 text-2xl">
+
+            <p
+                className={`text-xl font-medium mt-8 ${
+                    isLoading
+                        ? "flex transition-all duration-[400ms] translate-y-0"
+                        : "invisible -translate-y-2"
+                }`}
+            >
+                Loading your Pokémon...
+            </p>
+
+            <p className="mt-20 text-2xl">
                 Or, you can check the entire{" "}
                 <Link
                     href="/pokedex"

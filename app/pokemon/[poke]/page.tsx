@@ -9,14 +9,16 @@ export default async function Pokemon({
     const data = await getPokemon(params.poke.toLowerCase());
 
     return (
-        <div className="text-black">
-            <h2 className="text-black">{data.species.name}</h2>
-            <Image
-                src={data.sprites.other["official-artwork"].front_default}
-                alt="Pokemon"
-                width="300"
-                height={300}
-            />
-        </div>
+        <>
+            <div className="text-black">
+                <h2 className="text-black">{data.species.name}</h2>
+                <Image
+                    src={data.sprites.other["official-artwork"].front_default}
+                    alt="Pokemon"
+                    width="300"
+                    height={300}
+                />
+            </div>
+        </>
     );
 }

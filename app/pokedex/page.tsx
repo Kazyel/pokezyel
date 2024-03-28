@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getPokemonList } from "../api/route";
+import { Suspense } from "react";
 
 export default async function Pokedex() {
     const data = await getPokemonList();

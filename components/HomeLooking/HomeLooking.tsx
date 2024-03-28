@@ -43,7 +43,7 @@ export default function HomeLooking() {
                 Loading your Pokémon...
             </p>
 
-            <p className="mt-20 text-2xl">
+            <p className="mt-20 text-xl">
                 Or, you can check the entire{" "}
                 <Link
                     href="/pokedex"

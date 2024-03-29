@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function Error({
     error,
@@ -24,7 +23,7 @@ export default function Error({
             </h1>
             <h2 className="text-2xl text-neutral-600 ">
                 The <span className="font-medium">Pokémon</span> you were trying
-                to find <span className="font-medium">doesn't exist</span>!
+                to find <span className="font-medium">doesnt exist</span>!
             </h2>
             <Link
                 className="mt-16 text-lg border-4 p-4 border-yellow-400 font-semibold hover:bg-yellow-400 transition-all duration-150 rounded "

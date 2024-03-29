@@ -11,7 +11,7 @@ export default function HomeWelcome() {
                     width={1000}
                     height={0}
                     priority
-                    className="w-[500px] aspect-auto mb-8"
+                    className="w-[650px] aspect-auto mb-8"
                 />
                 <div>
                     <h2 className="text-4xl font-bold mb-8">

@@ -1,4 +1,4 @@
-import { getPokemon } from "@/hooks/getPokemons";
+import { getPokemon } from "@/utils/getPokemons";
 import Image from "next/image";
 
 export default async function Pokemon({

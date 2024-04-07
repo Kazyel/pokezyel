@@ -10,8 +10,8 @@ export default function PokeCard(pokemon: { name: string; image: string }) {
                 src={pokemon.image}
                 alt="Pokémon Art"
                 width={250}
-                height={0}
-                priority
+                height={250}
+                quality={75}
                 className="m-4"
             />
             <div className="w-[400px] border-x border-neutral-600 h-full bg-red-400 rounded-b">

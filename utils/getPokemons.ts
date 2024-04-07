@@ -1,3 +1,5 @@
+"use server";
+
 import { PokeList } from "@/components/pokedex/PokedexSection/PokedexSection";
 
 export const getPokemon = async (pokemon: string) => {

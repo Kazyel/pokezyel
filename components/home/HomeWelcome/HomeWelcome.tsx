@@ -8,9 +8,9 @@ export default function HomeWelcome() {
                 <Image
                     src="/poke-logo.png"
                     alt="Logo Pokézyel"
-                    width={1000}
+                    width={850}
                     height={0}
-                    priority
+                    priority={true}
                     className="w-[650px] aspect-auto mb-8"
                 />
                 <div>

@@ -12,7 +12,6 @@ export default function Navbar() {
                         alt="Logo Pokézyel"
                         width={150}
                         height={150}
-                        // priority
                         className="w-[150px] aspect-auto"
                     />
                 </Link>
